@@ -5,6 +5,8 @@
 * The challenge provides us with four files, two csv and two python.
 * grid.csv file consists of a 100x100 grid of various alphaneumeric characters and symbols from which we identify and extract the flag for the challenge.
 * out.csv consists of the distances from each flag element to three 'vertices' on the grid, followed by the inter-vertices distances, which help us uniquely identify each triplet on the grid, followed by the flag element.
+* secret.py helps us understand how to locate the flag and provides a fake flag for testing.
+* triangulate.py consists of a script to mask the original locations of the flag on the grid and provides us with offset values.
 # Assessment:
 * In this challenge, the characters of flag are hidden in the grid.csv file, using the triangulate script. The triangulate script takes the original coordinates of each character of the flag, uses a random offset of -7 to 7 to modify the coordinates and creates three such coordinates.
 * After creating these coordinates, it takes the values of these coordinates from the grid.csv and provides us two parts of information:
